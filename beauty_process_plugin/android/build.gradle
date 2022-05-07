@@ -1,0 +1,52 @@
+//group 'com.tencent.live_beauty_plugin'
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.3'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.4.1'
+    }
+}
+
+//plugins {
+//    id 'com.android.library'
+//    id 'com.github.dcendents.android-maven'
+//}
+
+
+group 'com.github.githubliuqi'
+version '1.0.0'
+
+rootProject.allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+
+
+android {
+    compileSdkVersion 30
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        minSdkVersion 16
+    }
+
+    dependencies {
+        api 'com.tencent.liteav:LiteAVSDK_Live:9.9.0.11820'
+    }
+}
+
+
