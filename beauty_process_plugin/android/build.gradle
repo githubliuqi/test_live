@@ -46,7 +46,7 @@ afterEvaluate {
         publications {
             release(MavenPublication) {
                 from components.release
-                groupId = 'com.tencent.live.test'
+                groupId = 'com.github.githubliuqi'
                 artifactId = 'BeautyProcess'
                 version = '1.0.0'
             }
