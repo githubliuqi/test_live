@@ -1,6 +1,7 @@
 /.idea
 /.gradle
 /build
+/test/build
 local.properties
 gradle-wrapper.jar
 *.iml
