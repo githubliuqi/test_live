@@ -1,35 +1,26 @@
-//group 'com.tencent.live_beauty_plugin'
 
 buildscript {
     repositories {
         google()
         mavenCentral()
+        maven { url "https://jitpack.io"}
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.3'
-        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.4.1'
+        classpath 'com.android.tools.build:gradle:4.0.0'
     }
 }
-
-//plugins {
-//    id 'com.android.library'
-//    id 'com.github.dcendents.android-maven'
-//}
-
-
-group 'com.github.githubliuqi'
-version '1.0.0'
 
 rootProject.allprojects {
     repositories {
         google()
         mavenCentral()
+        maven { url "https://jitpack.io"}
     }
 }
 
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'maven-publish'
 
 
 android {
@@ -49,4 +40,17 @@ android {
     }
 }
 
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.tencent.live.test'
+                artifactId = 'BeautyProcess'
+                version = '1.0.0'
+            }
+        }
+    }
+}
 
