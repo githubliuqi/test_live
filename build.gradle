@@ -8,15 +8,15 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.2.2'
+        classpath 'com.android.tools.build:gradle:4.0.0'
     }
 }
 
 allprojects {
     repositories {
         google()
-        maven { url "https://jitpack.io" }
         mavenCentral()
+        maven { url "https://jitpack.io" }
     }
 }
 
@@ -29,13 +29,6 @@ android {
         versionCode 1
         versionName "1.0"
     }
-
-//    buildTypes {
-//        release {
-//            minifyEnabled false
-//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-//        }
-//    }
 
     dependencies {
         api 'com.tencent.liteav:LiteAVSDK_Live:9.9.0.11820'
