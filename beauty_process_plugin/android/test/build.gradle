@@ -3,6 +3,9 @@ plugins {
     id 'maven-publish'
 }
 
+group = 'com.github.githubliuqi'
+version = '1.0.0'
+
 android {
     compileSdkVersion 30
 
@@ -21,10 +24,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+}
 
-    dependencies {
-        api 'com.tencent.liteav:LiteAVSDK_Live:9.9.0.11820'
-    }
+dependencies {
+    api 'com.tencent.liteav:LiteAVSDK_Live:9.9.0.11820'
 }
 
 
