@@ -3,7 +3,7 @@ plugins {
     id 'maven-publish'
 }
 
-group = 'com.github.githubliuqi'
+group = 'com.tencent.live'
 version = '1.0'
 
 android {
@@ -34,8 +34,8 @@ afterEvaluate {
             // Creates a Maven publication called "release".
             release(MavenPublication) {
                 from components.release
-                groupId = 'com.github.githubliuqi'
-                artifactId = 'test_live'
+                groupId = 'com.tencent.live'
+                artifactId = 'BeautyProcess'
                 version = '1.0'
             }
         }
