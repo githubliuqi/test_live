@@ -4,18 +4,16 @@ plugins {
 }
 
 group = 'com.github.githubliuqi'
-version = '1.0.0'
+version = '1.0'
 
 android {
-    compileSdkVersion 30
-
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
+    compileSdkVersion 31
 
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion 21
+        targetSdkVersion 31
+        versionCode 1
+        versionName "1.0"
     }
 
     buildTypes {
@@ -30,17 +28,16 @@ dependencies {
     api 'com.tencent.liteav:LiteAVSDK_Live:9.9.0.11820'
 }
 
-
 afterEvaluate {
     publishing {
         publications {
+            // Creates a Maven publication called "release".
             release(MavenPublication) {
                 from components.release
                 groupId = 'com.github.githubliuqi'
-                artifactId = 'BeautyProcess'
-                version = '1.0.0'
+                artifactId = 'test_live'
+                version = '1.0'
             }
         }
     }
 }
-
