@@ -1,1 +1,2 @@
 rootProject.name = 'live_beauty_plugin'
+include ':test'
